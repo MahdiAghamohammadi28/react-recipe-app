@@ -1,0 +1,93 @@
+.header {
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.logo img {
+  width: 3.5rem;
+}
+.logo h2 {
+  font-size: 2.4rem;
+  font-weight: 700;
+  text-transform: capitalize;
+  color: rgba(38, 38, 38, 0.8);
+}
+.items {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.items li {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem;
+  border-radius: 10px;
+  transition: all 0.4s ease-out;
+  cursor: pointer;
+}
+.items li:hover {
+  background-color: rgba(38, 38, 38, 0.1);
+}
+.bookmark_icon,
+.add_recipe-icon {
+  font-size: 2.4rem;
+}
+.items li span {
+  font-size: 1.8rem;
+  text-transform: capitalize;
+  font-weight: 500;
+  color: rgba(38, 38, 38, 1);
+}
+.bookmarks {
+  position: relative;
+}
+.bookmark_modal {
+  position: absolute;
+  visibility: hidden;
+  backface-visibility: hidden;
+  opacity: 0;
+  padding: 1.5rem 2rem;
+  bottom: -10rem;
+  right: 0;
+  width: 30rem;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  transition: all 0.5s ease-out;
+}
+.bookmarks:hover .bookmark_modal {
+  bottom: -8.5rem;
+  opacity: 1;
+  visibility: visible;
+}
+
+/* ////////// MEDIA QUERIES ///////////// */
+@media only screen and (max-width: 56.25em) {
+  .header {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .bookmark_icon,
+  .add_recipe-icon {
+    font-size: 3rem;
+  }
+  .items li span {
+    display: none;
+  }
+}
+@media only screen and (max-width: 26.5625em) {
+  .logo h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    text-transform: capitalize;
+    color: rgba(38, 38, 38, 0.8);
+    transform: translateY(1px);
+  }
+}
